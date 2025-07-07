@@ -83,3 +83,13 @@ components/
 
 
 ```
+
+### Dependencies
+- **Next.js**: The framework for building the app.
+- **React**: The library for building user interfaces.
+- **TypeScript**: The language for writing type-safe code.
+- **Mantine**: The UI library for building the app's components.
+- **OpenAI**: The API for generating AI content.
+- **Jest**: The testing framework for running tests.
+- **ESLint**: The linter for checking code style and quality.
+- **Prettier**: The code formatter for maintaining consistent code style.
