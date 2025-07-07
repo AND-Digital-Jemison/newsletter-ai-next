@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [Next.js](https://nextjs.org) project
 
-## Getting Started
+## Newsletter AI tool
 
-First, run the development server:
+### Getting Started
+
+To run the app you'll need to run the following commands in your terminal:
 
 ```bash
-npm run dev
-# or
+yarn
+```
+> install dependencies
+
+```bash
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+> start the development server
+
+you will also need to set up a `.env` file with the following variables:
+
+```bash
+OPENAI_API_KEY=your_openai_api_key
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You can get your OpenAI API key from [OpenAI's website](https://platform.openai.com/signup).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
+In the project directory, you can run:
+```bash
+yarn dev
+```
+Runs the app in development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+yarn build
+```
+Builds the app for production to the `.next` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+yarn start
+```
+Runs the app in production mode.\
+It will first build the app if it hasn't been built yet, and then start the server.
+```bash
+yarn lint
+```
+Runs the linter to check for any code style issues.
 
-## Learn More
+```bash
+yarn lint:fix
+```
+Runs the linter and automatically fixes any fixable issues.
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+yarn test
+```
+Runs the test suite using Jest.
+It will look for test files with the `.test.*` or `.spec.*` suffix and execute them.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The project is structured as follows:
+```
+src/
+├── pages/               # Next.js pages
+│   ├── api/             # API routes
+│   └── page.tsx         # Custom App component
+```
 
-## Deploy on Vercel
+**Components**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Components follow the a controller and view pattern, where the controller handles the logic and the view renders the UI.
+```
+components/
+├── component-name/                      # The name of the component
+│   ├── Component.controller.tsx         # The controller component
+│   ├── Component.controller.test.ts     # The controller component test file
+│   ├── Component.view.tsx               # The view component
+│   ├── Component.test.tsx               # The view component test file
+│   ├── types.ts                         # The types for the component
+│   └── index.ts                         # A barrel file to export the component and types
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+```
