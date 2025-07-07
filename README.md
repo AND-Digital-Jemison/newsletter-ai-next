@@ -20,6 +20,7 @@ you will also need to set up a `.env` file with the following variables:
 
 ```bash
 OPENAI_API_KEY=your_openai_api_key
+PYTHON_API_HOST=http://localhost:5000 # or the URL of your Python API
 ```
 
 You can get your OpenAI API key from [OpenAI's website](https://platform.openai.com/signup).

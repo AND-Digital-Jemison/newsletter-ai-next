@@ -9,7 +9,7 @@ export const POST = async (req: NextRequest) => {
   const context = await req.json();
 
   const scrapeResponse = await fetch(
-    `http://localhost:5000/api/v1/process?url=${context}`,
+    `${process.env.PYTHON_API_HOST || 'http://localhost:5000'}/api/v1/process?url=${context}`,
     {
       method: 'GET',
     }
